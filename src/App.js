@@ -11,7 +11,8 @@ const Boxcustomized = styled((props) => (
   margin: '5px',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-start'
+  alignItems: 'flex-start',
+  marginBottom: '10px'
 }))
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        marginLeft: '10px'
+        marginLeft: '10px',
       }}
     >
 

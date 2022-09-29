@@ -11,7 +11,9 @@ const authAPI = {
         }
         const data = await axiosClient.post('auth/login', qs.stringify(body))
         if (data.status === "Successfully") {
-            console.log(`token: ${data.access_token}`);
+            const access_token = data.access_token;
+            console.log(`token: ${access_token}`);
+            localStorage.setItem('accessToken-CSM', access_token);
         }
         else {
             console.log("Login failure");
@@ -47,7 +49,7 @@ const authAPI = {
 
     // [POST] auth/update
     path_updateInfomation : `[POST] auth/update`,
-    updateInfomation: async (email, companyName, address) => {
+    updateInformation: async (email, companyName, address) => {
         const body = {
             email, companyName, address
         }

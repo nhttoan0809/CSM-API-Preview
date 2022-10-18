@@ -25,7 +25,7 @@ const authAPI = {
     logout: async () => {
         const data = await axiosClient.get('auth/logout')
         if (data.status === "Successfully") {
-            
+            console.log(data.data)
         }
         else {
 
@@ -34,13 +34,13 @@ const authAPI = {
 
     // [POST] auth/register
     path_register : `[POST] auth/register`,
-    register: async (username, password, rePassword, email, companyName) => {
+    register: async (username, password, name, email, companyName) => {
         const body = {
-            username, password, rePassword, email, companyName
+            username, password, name, email, companyName
         }
         const data = await axiosClient.post('auth/register', qs.stringify(body))
         if (data.status === "Successfully") {
-
+            console.log(data.data)
         }
         else {
 
@@ -55,7 +55,7 @@ const authAPI = {
         }
         const data = await axiosClient.post('auth/update', qs.stringify(body))
         if (data.status === "Successfully") {
-
+            console.log(data.data)
         }
         else {
 
@@ -64,13 +64,13 @@ const authAPI = {
 
     // [POST] auth/company/update
     path_updateCompanyInfomation : `[POST] auth/company/update`,
-    updateCompanyInfomation: async (email, companyName, address) => {
+    updateCompanyInfomation: async (companyName, address) => {
         const body = {
-            email, companyName, address
+            companyName, address
         }
         const data = await axiosClient.post('auth/company/update', qs.stringify(body))
         if (data.status === "Successfully") {
-
+            console.log(data.data)
         }
         else {
 

@@ -10,26 +10,21 @@ const authAPI = {
             username, password
         }
         const data = await axiosClient.post('auth/login', qs.stringify(body))
-        if (data.status === "Successfully") {
-            const access_token = data.access_token;
-            console.log(`token: ${access_token}`);
-            localStorage.setItem('accessToken-CSM', access_token);
-        }
-        else {
-            console.log("Login failure");
-        }
+        return data;
+    },
+
+    // [GET] auth/reLogin
+    path_reLogin: `[GET] auth/reLogin`,
+    reLogin: async () => {
+        const data = await axiosClient.get('auth/reLogin')
+        return data;
     },
 
     // [GET] auth/logout
     path_logout: `[GET] auth/logout`,
     logout: async () => {
         const data = await axiosClient.get('auth/logout')
-        if (data.status === "Successfully") {
-            console.log(data.data)
-        }
-        else {
-
-        }
+        return data;
     },
 
     // [POST] auth/register
@@ -39,42 +34,19 @@ const authAPI = {
             username, password, name, email, companyName
         }
         const data = await axiosClient.post('auth/register', qs.stringify(body))
-        if (data.status === "Successfully") {
-            console.log(data.data)
-        }
-        else {
-
-        }
+        return data;
     },
 
-    // [POST] auth/update
-    path_updateInfomation : `[POST] auth/update`,
-    updateInformation: async (email, companyName, address) => {
-        const body = {
-            email, companyName, address
-        }
-        const data = await axiosClient.post('auth/update', qs.stringify(body))
-        if (data.status === "Successfully") {
-            console.log(data.data)
-        }
-        else {
-
-        }
+    // [GET] auth/getInfor
+    path_getInfor : `auth/getInfor`,
+    getInfor: async () => {
+        const data = await axiosClient.get('auth/getInfor')
+        return data
     },
 
-    // [POST] auth/company/update
-    path_updateCompanyInfomation : `[POST] auth/company/update`,
-    updateCompanyInfomation: async (companyName, address) => {
-        const body = {
-            companyName, address
-        }
-        const data = await axiosClient.post('auth/company/update', qs.stringify(body))
-        if (data.status === "Successfully") {
-            console.log(data.data)
-        }
-        else {
-
-        }
+    // [POST] auth/updateInfor
+    path_updateInfor : `[POST] auth/updateInfor`,
+    updateInfor: async (email, companyName, address) => {
     }
 }
 

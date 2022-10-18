@@ -1,29 +1,19 @@
-import axiosClient from "./axiosClient"
-import qs from 'qs';
+import axiosClient from "./axiosClient";
 
 const stationAPI = {
 
-    // [GET] agent/_id_agent/warehouse/:id_warehouse/station/connect
-    path_station_connect : `[GET] agent/_id_agent/warehouse/:id_warehouse/station/:id_station/connect`,
-    station_connect  : async (id_warehouse, id_station) => {
-        const data = await axiosClient.get(`agent/_id_agent/warehouse/${id_warehouse}/station/${id_station}/connect?iot_username=${iot_username}&${iot_password}`)
-        if (data.status === "Successfully") {
-            console.log(data.data)
-        }
-        else {
-
-        }
+    // [GET] agent/:id_agent/warehouse/:id_warehouse/station/connect
+    path_connect : `[GET] agent/:id_agent/warehouse/:id_warehouse/station/connect`,
+    connect: async (id_agent, id_warehouse, iot_username, iot_password) => {
+        const data = await axiosClient.get(`agent/${id_agent}/warehouse/${id_warehouse}/station/connect?iot_username=${iot_username}&iot_passwotd=${iot_password}`)
+        return data
     },
-    // [DELETE] agent/_id_agent/warehouse/:id_warehouse/station/:id_station/disconnect
-    path_station_disconnect : `[DELETE] agent/_id_agent/warehouse/:id_warehouse/station/:id_station/disconnect`,
-    station_disconnect  : async (id_warehouse, id_station) => {
-        const data = await axiosClient.delete(`agent/_id_agent/warehouse/${id_warehouse}/station/${id_station}/disconnect`)
-        if (data.status === "Successfully") {
-            console.log(data.data)
-        }
-        else {
 
-        }
+    // [DELETE] agent/:id_agent/warehouse/:id_warehouse/station/:id_station/disconnect
+    path_disconnect : `[DELETE] agent/:id_agent/warehouse/:id_warehouse/station/:id_station/disconnect`,
+    disconnect  : async (id_agent, id_warehouse, id_station) => {
+        const data = await axiosClient.delete(`agent/${id_agent}/warehouse/${id_warehouse}/station/${id_station}/disconnect`)
+        return data
     },
 
 }

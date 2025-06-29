@@ -1,4 +1,8 @@
-# Cold Storage Management API Tester
+# Cold Storage Management (CSM) API Tester
+
+## Definition
+
+Cold Storage Management (CSM) is a system designed to simulate a cold storage facility and the temperature-controlled products stored inside, based on a real-world cold warehouse integrated with a sensor system. The purpose of CSM is to provide users — acting as managers or supervisors — with the ability to monitor the condition of the products through temperature data, enabling them to make informed decisions accordingly.
 
 ## Overview
 

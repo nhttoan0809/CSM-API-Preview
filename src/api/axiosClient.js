@@ -1,8 +1,8 @@
 const axios = require('axios')
 
 const axiosClient = axios.create({
-    baseURL: 'https://cold-storage-management-api.herokuapp.com',
-   // baseURL: 'http://localhost:5000',
+    // baseURL: 'https://cold-storage-management-api.herokuapp.com',
+   baseURL: 'http://localhost:8000',
     // timeout: 1000,
     haeders: {
       'Content-Type': 'application/x-www-form-urlencoded',

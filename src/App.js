@@ -25,12 +25,13 @@ function App() {
     <div className="App"
       style={{
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'flex-start',
         marginLeft: '10px',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between'
       }}
     >
-
 
       {/* Author */}
       <Boxcustomized>
@@ -85,14 +86,6 @@ function App() {
       </Boxcustomized>
 
 
-
-
-
-
-
-
-
-
       {/* Agent */}
       <Boxcustomized>
         <Typography variant='h3'>Agent</Typography>
@@ -127,14 +120,6 @@ function App() {
 
 
       </Boxcustomized>
-
-
-
-
-
-
-
-
 
 
       {/* Warehouse */}
@@ -198,14 +183,6 @@ function App() {
       </Boxcustomized>
 
 
-
-
-
-
-
-
-
-
       {/* Sensor */}
       <Boxcustomized>
         <Typography variant='h3'>Sensor</Typography>
@@ -247,14 +224,6 @@ function App() {
 
 
       </Boxcustomized>
-
-
-
-
-
-
-
-
 
 
       {/* Pallet */}
@@ -326,14 +295,6 @@ function App() {
       </Boxcustomized>
 
 
-
-
-
-
-
-
-
-
       {/* Product */}
       <Boxcustomized>
         <Typography variant='h3'>Product</Typography>
@@ -376,14 +337,6 @@ function App() {
 
 
       </Boxcustomized>
-
-
-
-
-
-
-
-
 
 
       {/* Pallet_template */}

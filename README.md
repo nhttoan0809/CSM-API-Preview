@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Cold Storage Management API Tester
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project provides a user-friendly interface for listing, testing, and verifying all APIs related to the Cold Storage Management system. Originally built to support a teammate during a university graduation thesis project (2021), this tool enables rapid API exploration and validation, streamlining the development and integration process for the larger [Cold Storage Management System](https://github.com/nhttoan0809/cold-storage-management-fe).
 
-In the project directory, you can run:
+> **⚠️ Note:** This system is no longer operated as a standalone application and was developed solely as a supplementary tool for a larger system.
 
-### `npm start`
+## Key Reflections & Lessons Learned
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Authentication & Session Management:**  
+  Building this project provided valuable experience in implementing user account management and login authentication, following best practices for web applications. It also offered practical insights into managing user sessions securely and efficiently.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Technology Choices & Limitations:**  
+  At the time, the project was implemented using custom solutions. In hindsight, adopting a tool like **Swagger** would have significantly accelerated development and improved usability for API documentation and testing.
 
-### `npm test`
+- **Code Organization & Maintainability:**  
+  The codebase lacks the use of modern extensions and best practices for clean architecture, maintainability, and scalability. This limitation is acknowledged as the project was created by a student long ago, primarily for learning purposes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- 🔍 **API Listing:** View all available API endpoints in a structured format.
+- ⚡ **Interactive Testing:** Run API requests directly from the UI and inspect responses in real time.
+- 📝 **Result Verification:** Instantly check and debug API outputs for correctness.
+- 🤝 **Collaboration:** Designed to assist backend and frontend developers in seamless API integration.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Access & Routes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Home:** `/` — Dashboard and API overview.
+- **API Details:** `/api/:endpoint` — Detailed view and test interface for each API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- **Frontend:** React (bootstrapped with Create React App)
+- **HTTP Client:** Axios
+- **UI Components:** Material-UI
+- **Routing:** React Router
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Each endpoint supports standard HTTP methods (GET, POST, PUT, DELETE)
+- Structure:
+  - Authentication: `/auth`
+  - Agent: `/agent`
+  - Warehouse: `/agent/:id_agent/warehouse`
+  - Station: `/agent/:id_agent/warehouse/:id_warehouse/station`
+  - Sensor: `/agent/:id_agent/warehouse/:id_warehouse/sensor`
+  - Pallet: `/agent/:id_agent/warehouse/:id_warehouse/pallet`
+  - Pallet Template: `/pallet_template`
+  - Product: `agent/:id_agent/warehouse/:id_warehouse/prodcut`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Motivation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This repository was created to accelerate API development and testing for the Cold Storage Management project, ensuring robust integration and reducing manual testing effort. It empowers developers to quickly validate endpoints and collaborate efficiently.
 
-## Learn More
+## Preference Image
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![API](CSM-AxiosFE-Image.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_For more details on the main Cold Storage Management project, visit the [main repository](https://github.com/nhttoan0809/cold-storage-management-fe)_

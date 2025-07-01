@@ -2,11 +2,12 @@
 
 ## Definition
 
-Cold Storage Management (CSM) is a system designed to simulate a cold storage facility and the temperature-controlled products stored inside, based on a real-world cold warehouse integrated with a sensor system. The purpose of CSM is to provide users — acting as managers or supervisors — with the ability to monitor the condition of the products through temperature data, enabling them to make informed decisions accordingly.
+❄️ **Cold Storage Management (CSM)** is a smart system designed to simulate a real-world cold storage facility and its temperature-controlled products, powered by integrated IoT sensors.  
+Its mission: empower managers and supervisors to monitor product conditions in real time through live temperature data, enabling informed, data-driven decisions for optimal storage and safety. 📦🌡️
 
 ## Overview
 
-This project provides a user-friendly interface for listing, testing, and verifying all APIs related to the Cold Storage Management system. Originally built to support a teammate during a university graduation thesis project (2021), this tool enables rapid API exploration and validation, streamlining the development and integration process for the larger [Cold Storage Management System](https://github.com/nhttoan0809/cold-storage-management-fe).
+This project provides a user-friendly interface for listing, testing, and verifying all APIs related to the Cold Storage Management system. Originally built to support a teammate during a university graduation thesis project (2021), this tool enables rapid API exploration and validation, streamlining the development and integration process for the larger [Cold Storage Management System](https://github.com/nhttoan0809/CSM).
 
 > **⚠️ Note:** This system is no longer operated as a standalone application and was developed solely as a supplementary tool for a larger system.
 
